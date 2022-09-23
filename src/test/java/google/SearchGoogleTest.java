@@ -1,4 +1,4 @@
-package Google;
+package google;
 
 public class SearchGoogleTest {
 }

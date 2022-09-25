@@ -11,7 +11,7 @@ import utilities.DriverManager;
 public class BaseTest {
 
     protected WebDriver webDriver;
-    private String url = "https://testfaceclub.com/aut-products/";
+    private String url = "https://www.google.com/";
 
     @BeforeMethod
     public void setUp() throws Exception {

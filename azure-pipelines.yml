@@ -18,7 +18,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean test'
-    testRunTitle: 'My Second run'
+    testRunTitle: 'Validate Results HTML File '
     jdkVersionOption: 1.11
     testResultsFiles: 'Reports'
     

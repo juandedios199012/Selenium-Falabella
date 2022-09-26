@@ -2,7 +2,6 @@ package task.categorie;
 
 import actions.Enter;
 import org.openqa.selenium.WebDriver;
-import pages.google.GoogleSearchPage;
 import pages.product.CategoriePage;
 
 public class SearchCategorie {

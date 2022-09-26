@@ -1,7 +1,6 @@
-package sagaFalabella;
+package sagafalabella.categorie;
 
 import base.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import task.categorie.SearchCategorie;
 import task.google.SearchGoogle;

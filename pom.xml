@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.1.0</version>
+            <version>7.6.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -56,7 +56,12 @@
             <artifactId>selenium-edge-driver</artifactId>
             <version>4.4.0</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.3</version>
+        </dependency>
 
 
     </dependencies>

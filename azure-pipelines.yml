@@ -18,9 +18,9 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean test'
-    testRunTitle: 'Update testResultsFiles '
+    testRunTitle: 'Update testResultsFiles to surefire '
     jdkVersionOption: 1.11
-    testResultsFiles: 'Reports/Index-*.html'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'

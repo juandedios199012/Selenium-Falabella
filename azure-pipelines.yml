@@ -20,7 +20,8 @@ steps:
     goals: 'clean test'
     testRunTitle: 'My Second run'
     jdkVersionOption: 1.11
-
+    testResultsFiles: 'Reports'
+    
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:

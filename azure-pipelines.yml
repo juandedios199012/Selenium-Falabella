@@ -18,8 +18,9 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean test'
-    testRunTitle: 'Validate Results HTML File '
+    testRunTitle: 'Update testResultsFiles '
     jdkVersionOption: 1.11
+    testResultsFiles: 'Reports/Index-*.html'
     
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'

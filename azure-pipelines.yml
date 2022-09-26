@@ -1,0 +1,39 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- main
+
+pool:
+  name: PortafolioAG
+  demands: maven
+
+#Your build pipeline references an undefined variable named ‘Parameters.mavenPOMFile’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+
+steps:
+- task: Maven@3
+  displayName: 'Maven pom.xml'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'clean test'
+    testRunTitle: 'My Second run'
+    jdkVersionOption: 1.11
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**/*'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    CleanTargetFolder: true
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: TestProjectScript'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: TestProjectScript
+  condition: succeededOrFailed()
+

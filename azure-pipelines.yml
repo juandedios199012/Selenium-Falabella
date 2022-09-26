@@ -20,7 +20,6 @@ steps:
     goals: 'clean test'
     testRunTitle: 'Validate Results HTML File '
     jdkVersionOption: 1.11
-    testResultsFiles: 'Reports'
     
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'

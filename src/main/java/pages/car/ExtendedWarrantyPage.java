@@ -15,7 +15,7 @@ public class ExtendedWarrantyPage {
 
     //localizador de Comuna (lista)
     public static By selectComuna = By.id("comuna");
-
+    // aqui
     //localizador para continuar despacho
     public static By buttonContinueCheckout = By.cssSelector("button[class='fbra_button fbra_test_button fbra_formItem__field04']");
 }

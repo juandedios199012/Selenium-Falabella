@@ -21,7 +21,7 @@ public class WaitUntilElement {
 
     public static boolean isVisible(WebDriver webDriver, By locator){
         try {
-            WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
             wait.until(ExpectedConditions.invisibilityOf(webDriver.findElement(locator)));
             return true;
         }catch (Exception e){

@@ -14,9 +14,11 @@ public class ProductTest extends BaseTest {
     public void testAddProduct(){
         SearchGoogle.withTheData(webDriver, "Falabella.co");
         CloseShadowRoot.onClickClose(webDriver);
-        SearchCategorie.withTheData(webDriver, "Televisor Exclusiv");
+        SearchCategorie.withTheData(webDriver, "Televisor 32 LG");
         AddProductToCar.isVisibleResultProduct(webDriver);
         DetailsProduct.onClickProduct(webDriver);
+        AddCant.onClickCant(webDriver);
+        AddWarranty.onClickWarranty(webDriver);
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
     }

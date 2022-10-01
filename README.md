@@ -1,14 +1,63 @@
-Porque la clases UI no tienen herencia de BasePage, 
-para hereder el Drive
+# Saga Falabella Test Automation Framework
+### Content index
+- [Description](#descripcion)
+- [Team](#integrantes)
+- [Teacher](#teacher)
+- [Tools](#tools)
+- [Test architecture](#architecture)
 
-Porque son static los locators
+### Descripción
+Proyecto del curso **Automatización I - Intro. a la Automatización de PruebasS: UnitTest/UI con SELENIUM** del **Diplomado Testing de Software**
+por la [Universidad Cátolica Boliviana "San Pablo"](https://www.ucb.edu.bo/) de Bolivia.
 
-Porque las clases task siempre llaman al objeto
-WebDriver en el metodo void como parametro,
-en vez de que sea llamado una sola vez 
-para todas las clases
+### Team
+  - [ARIZACA CALLEJAS GUISELA LIBERTAD](https://www.linkedin.com/in/guisela-arizaca/)
+  - [BLANCO ADRIAN DANIEL ADOLFO](https://www.linkedin.com/in/daniel-blanco-adrian/)
+  - VILLARROEL VARGAS LUIS ALBERTO
+  - [BAUDAZIO SANCHEZ JUAN DE DIOS](https://www.linkedin.com/in/juandediosbaudaziosanchez/)
 
-En el proyecto de ScreenPlay-clase-9 la clase
-baseTest no tiene un constructor del driver
-He replicado lo mismo en la clase basetest, se puedeo? 
-porque en este clase el driver es static
+### Teacher
+  - [JUAN DAVID LOPEZ FUENTES](https://www.linkedin.com/in/juan-david-lopez/) 
+
+### Tools
+  - Java 11
+  - Intellij IDEA (optional)
+  - Selenium WebDriver
+  - Gson for Test Data
+  - Log4j2
+  - Extentreports
+  - TestNG for Run Test
+### Test architecture
+  - ScreenPlay pattern
+  - Factory pattern for Web drivers
+  - Singleton pattern for Json Test Data Helper Class
+  - Model Class
+  - Support Chrome and Firefox 
+  - Use Selenium Grid
+  - BaseTest Class
+  - Parallel execution
+  - Azure Pipeline
+  
+
+  
+    
+
+
+
+
+
+
+Consultas:
+
+Como se crea el metodo before para flujos complejos
+de los test con dataProvider
+
+El reconoce el tipo de retorno "objeto" los metodos
+dataProvider
+
+Como enviar al metodo beforeMothod en la BASETEST
+un indicación que permita soporte de ejecución
+local y remota .Boleano
+
+
+

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import report.ReportManager;
-import utilities.DriverManager;
 
 public class BaseTest {
 

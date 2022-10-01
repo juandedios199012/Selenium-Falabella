@@ -1,19 +1,32 @@
 package sagafalabella.product;
 
 import base.BaseTest;
+import google.GoogleTest;
+import helper.JsonTestDataHelper;
+import model.google.Google;
+import model.sagaFalabella.categorie.Categorie;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import task.CloseShadowRoot;
+import sagafalabella.categorie.CategorieTest;
+import utilities.CloseShadowRoot;
 import task.categorie.SearchCategorie;
 import task.google.SearchGoogle;
 import task.product.DetailsProduct;
 
+import java.io.FileNotFoundException;
+
 public class ProductTest extends BaseTest {
 
+    @BeforeMethod
+    public void setUpProductTests() throws FileNotFoundException {
+        Categorie categorie = (Categorie) JsonTestDataHelper.getInstance().
+                geTestData(CategorieTest.catogorieTestDataPath + "categorieData.json", Categorie.class)[0];
+        SearchCategorie.withTheData(webDriver, categorie);
+    }
+
     @Test
-    public void testAddProduct(){
-        SearchGoogle.withTheData(webDriver, "Falabella.co");
-        CloseShadowRoot.onClickClose(webDriver);
-        SearchCategorie.withTheData(webDriver, "Televisor Exclusiv");
+    public void testAddProduct(Google google, Categorie categorie){
         DetailsProduct.onClickProduct(webDriver);
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));

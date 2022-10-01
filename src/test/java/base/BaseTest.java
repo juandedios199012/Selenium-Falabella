@@ -1,35 +1,29 @@
 package base;
 
 import com.aventstack.extentreports.Status;
+import factory.WebDriverFactory;
 import helper.ScreenShotHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 import report.ReportManager;
 import utilities.DriverManager;
 
 public class BaseTest {
 
     protected WebDriver webDriver;
-    private String url = "https://www.google.com/";
 
     @BeforeSuite
     public static void setUpSuite() throws Exception {
         ReportManager.init("Reports", "SagaFallabellaSite");
     }
 
-
     @BeforeMethod
-    public void setUp(ITestResult iTestResult)  {
+    @Parameters({"url","browser","seleniumGridUrl"})
+    public void setUp(String url,String browser, String seleniumGridUrl,ITestResult iTestResult) throws Exception {
         ReportManager.getInstance().startTest(iTestResult.getMethod().getMethodName());
 
-        webDriver = new DriverManager().initLocalDriver();
-        webDriver.getWindowHandles();
-        webDriver.manage().deleteAllCookies();
-
+        webDriver = WebDriverFactory.getDriver(browser, seleniumGridUrl);
         webDriver.get(url);
         webDriver.manage().window().maximize();
     }

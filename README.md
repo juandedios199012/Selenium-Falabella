@@ -4,7 +4,7 @@
 - [Team](#integrantes)
 - [Teacher](#teacher)
 - [Tools](#tools)
-- [Test architecture](#test architecture)
+- [Test architecture](#test-architecture)
 
 ### Descripción
 Proyecto del curso **Automatización I - Intro. a la Automatización de PruebasS: UnitTest/UI con SELENIUM** del **Diplomado Testing de Software**

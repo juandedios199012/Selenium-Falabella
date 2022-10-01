@@ -12,6 +12,7 @@ import sagafalabella.categorie.CategorieTest;
 import utilities.CloseShadowRoot;
 import task.categorie.SearchCategorie;
 import task.google.SearchGoogle;
+import task.product.AddProductToCar;
 import task.product.DetailsProduct;
 
 import java.io.FileNotFoundException;
@@ -27,7 +28,14 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void testAddProduct(Google google, Categorie categorie){
+    public void testAddProduct(){
+        SearchGoogle.withTheData(webDriver, "Falabella.co");
+        CloseShadowRoot.onClickClose(webDriver);
+        SearchCategorie.withTheData(webDriver, "Televisor 32 LG");
+        AddProductToCar.isVisibleResultProduct(webDriver);
         DetailsProduct.onClickProduct(webDriver);
+        AddCant.onClickCant(webDriver);
+        AddWarranty.onClickWarranty(webDriver);
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
     }

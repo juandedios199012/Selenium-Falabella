@@ -32,9 +32,10 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://www.ucb.edu.bo/) de
   - ScreenPlay pattern
   - Factory pattern for Web drivers
   - Singleton pattern for Json Test Data
-  - Model Class
+  - Test Data Using Model Classes
   - Support Chrome and Firefox 
   - Use Selenium Grid
+  - Run Local and Remote
   - BaseTest Class
   - Parallel execution
   - Azure Pipeline

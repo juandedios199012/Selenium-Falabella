@@ -27,10 +27,11 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://www.ucb.edu.bo/) de
   - Log4j2
   - Extentreports
   - TestNG for Run Test
+
 ### Test architecture
   - ScreenPlay pattern
   - Factory pattern for Web drivers
-  - Singleton pattern for Json Test Data Helper Class
+  - Singleton pattern for Json Test Data
   - Model Class
   - Support Chrome and Firefox 
   - Use Selenium Grid

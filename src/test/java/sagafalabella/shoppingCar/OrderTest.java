@@ -13,7 +13,6 @@ import utilities.CloseShadowRoot;
 import task.car.AddCant;
 import task.car.AddWarranty;
 import task.categorie.SearchCategorie;
-import task.google.SearchGoogle;
 import task.product.AddProductToCar;
 import task.product.DetailsProduct;
 
@@ -34,7 +33,6 @@ public class OrderTest extends BaseTest {
         AddProductToCar.onClickCar(webDriver);
         AddCant.onClickCant(webDriver);
         AddWarranty.onClickWarranty(webDriver);
-        //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
     }
 }

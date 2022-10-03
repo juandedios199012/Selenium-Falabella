@@ -1,9 +1,8 @@
 package task.cart;
 
-import actions.Click;
 import actions.WaitUntilElement;
 import org.openqa.selenium.WebDriver;
-import pages.cart.ExtendedWarrantyPage;
+import pages.shopping.ExtendedWarrantyPage;
 
 public class Basket {
     public static void isVisibleBasketPage(WebDriver webDriver){

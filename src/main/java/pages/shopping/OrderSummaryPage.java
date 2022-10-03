@@ -1,4 +1,4 @@
-package pages.cart;
+package pages.shopping;
 
 public class OrderSummaryPage {
 }

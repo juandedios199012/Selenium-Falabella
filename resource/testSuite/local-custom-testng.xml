@@ -8,7 +8,7 @@
     <test name="shoppingCar-chrome" >
         <parameter name="browser" value="chrome"/>
         <packages>
-            <package name="sagafalabella.shoppingCar" />
+            <package name="shopping" />
         </packages>
     </test>
 

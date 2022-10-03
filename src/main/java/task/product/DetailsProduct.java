@@ -8,11 +8,8 @@ import pages.product.ProductPage;
 
 public class DetailsProduct {
 
-    /*public AddProduct(WebDriver webDriver) {
-        super(webDriver);
-    }*/
     public static void clickAddToBagButton(WebDriver webDriver){
-        WaitUntilElement.isVisible(webDriver, ProductPage.ADD_BAG_BUTTON);
+        WaitUntilElement.isPresent(webDriver, ProductPage.ADD_BAG_BUTTON);
         Click.on(webDriver,ProductPage.ADD_BAG_BUTTON);
     }
 
@@ -21,9 +18,6 @@ public class DetailsProduct {
     }
 
     public static void onClickProduct(WebDriver webDriver){
-        //WaitUntilAlert.isPresent(webDriver);
-        WaitUntilElement.isVisible(webDriver,ProductPage.linkProduct);
-        Click.on(webDriver, ProductPage.IMAGE_ITEM);
-        //Click.onClickElementList(webDriver, ProductPage.linkProduct,0);
+        Click.onClickElementList(webDriver, ProductPage.ITEM_PRODUCT,0);
     }
 }

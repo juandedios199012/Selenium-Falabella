@@ -13,7 +13,7 @@ public class AddProductToCar{
     }
 
     public static void onClickCar(WebDriver webDriver){
-        WaitUntilElement.isVisible(webDriver, ProductPage.buttonCar);
-        Click.on(webDriver, ProductPage.buttonCar);
+        WaitUntilElement.isVisible(webDriver, ProductPage.ADD_BAG_BUTTON);
+        Click.on(webDriver, ProductPage.ADD_BAG_BUTTON);
     }
 }

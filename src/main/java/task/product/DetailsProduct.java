@@ -11,8 +11,9 @@ public class DetailsProduct {
     /*public AddProduct(WebDriver webDriver) {
         super(webDriver);
     }*/
-    public static boolean isVisibleAddToBagButton(WebDriver webDriver){
-        return WaitUntilElement.isVisible(webDriver, ProductPage.DETAIL_PRODUCT_NAME);
+    public static void clickAddToBagButton(WebDriver webDriver){
+        WaitUntilElement.isVisible(webDriver, ProductPage.ADD_BAG_BUTTON);
+        Click.on(webDriver,ProductPage.ADD_BAG_BUTTON);
     }
 
     public static boolean isVisibleProductInformation(WebDriver webDriver){
@@ -21,10 +22,8 @@ public class DetailsProduct {
 
     public static void onClickProduct(WebDriver webDriver){
         //WaitUntilAlert.isPresent(webDriver);
-
         WaitUntilElement.isVisible(webDriver,ProductPage.linkProduct);
-        Click.onClickElementList(webDriver, ProductPage.linkProduct,0);
-        Click.on(webDriver,ProductPage.DETAIL_PRODUCT_NAME);
-
+        Click.on(webDriver, ProductPage.IMAGE_ITEM);
+        //Click.onClickElementList(webDriver, ProductPage.linkProduct,0);
     }
 }

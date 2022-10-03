@@ -23,9 +23,10 @@ public class OrderTest extends BaseTest {
     public void testOrder(Google google){
         SearchGoogle.withTheData(webDriver, google);
         SearchCategory.withTheData(webDriver, google);
+        //LIst result search
         AddProductToCar.isVisibleResultProduct(webDriver);
         DetailsProduct.onClickProduct(webDriver);
-        DetailsProduct.isVisibleAddToBagButton(webDriver);
+        DetailsProduct.clickAddToBagButton(webDriver);
 
 
         AddWarranty.onClickWarranty(webDriver);

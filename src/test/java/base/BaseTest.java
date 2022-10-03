@@ -18,7 +18,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    @Parameters({"url","browser","seleniumGridUrl"})
+   @Parameters({"url","browser","seleniumGridUrl"})
     public void setUp(String url,String browser, String seleniumGridUrl,ITestResult iTestResult) throws Exception {
         ReportManager.getInstance().startTest(iTestResult.getMethod().getMethodName());
 

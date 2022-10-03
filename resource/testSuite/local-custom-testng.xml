@@ -5,27 +5,6 @@
     <parameter name="url" value="https://www.google.com/"/>
     <parameter name="seleniumGridUrl" value="http://localhost:4444/wd/hub"/>
 
-    <test name="google-chrome" >
-        <parameter name="browser" value="chrome"/>
-        <packages>
-            <package name="google" />
-        </packages>
-    </test>
-
-    <test name="categorie-chrome" >
-        <parameter name="browser" value="chrome"/>
-        <packages>
-            <package name="sagafalabella.categorie" />
-        </packages>
-    </test>
-
-    <test name="product-chrome" >
-        <parameter name="browser" value="chrome"/>
-        <packages>
-            <package name="sagafalabella.product" />
-        </packages>
-    </test>
-
     <test name="shoppingCar-chrome" >
         <parameter name="browser" value="chrome"/>
         <packages>
@@ -43,7 +22,7 @@
     <test name="categorie-firefox" >
         <parameter name="browser" value="firefox"/>
         <packages>
-            <package name="sagafalabella.categorie" />
+            <package name="sagafalabella.category" />
         </packages>
     </test>
 

@@ -15,7 +15,7 @@
     <!--<test name="categorie-CHROME-REMOTE" >
         <parameter name="browser" value="chrome-remote"/>
         <packages>
-            <package name="sagafalabella.categorie" />
+            <package name="sagafalabella.category" />
         </packages>
     </test>
 
@@ -43,7 +43,7 @@
     <test name="categorie-firefox-remote" >
         <parameter name="browser" value="firefox-remote"/>
         <packages>
-            <package name="sagafalabella.categorie" />
+            <package name="sagafalabella.category" />
         </packages>
     </test>
 

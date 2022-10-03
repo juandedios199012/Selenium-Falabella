@@ -1,38 +1,48 @@
 package sagafalabella.shoppingCar;
 
 import base.BaseTest;
-import google.GoogleTest;
 import helper.JsonTestDataHelper;
 import model.google.Google;
-import model.sagaFalabella.categorie.Categorie;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import sagafalabella.categorie.CategorieTest;
-import utilities.CloseShadowRoot;
-import task.car.AddCant;
-import task.car.AddWarranty;
-import task.categorie.SearchCategorie;
+import task.cart.AddWarranty;
+import task.cart.Basket;
+import task.category.SearchCategory;
 import task.product.AddProductToCar;
 import task.product.DetailsProduct;
+import task.google.SearchGoogle;
+
 
 import java.io.FileNotFoundException;
 
 public class OrderTest extends BaseTest {
 
-    @BeforeMethod
-    public void setUpOrderTests() throws FileNotFoundException {
-        Categorie categorie = (Categorie) JsonTestDataHelper.getInstance().
-                geTestData(CategorieTest.catogorieTestDataPath + "categorieData.json", Categorie.class)[0];
-        SearchCategorie.withTheData(webDriver, categorie);
-        DetailsProduct.onClickProduct(webDriver);
-    }
+    public static String googleTestDataPath = "resource/testData/google/";
 
-    @Test
-    public void testOrder(){
+    @Test(dataProvider="googleDataProvider")
+    public void testOrder(Google google){
+        SearchGoogle.withTheData(webDriver, google);
+        SearchCategory.withTheData(webDriver, google);
+        AddProductToCar.isVisibleResultProduct(webDriver);
+        DetailsProduct.onClickProduct(webDriver);
+        DetailsProduct.isVisibleAddToBagButton(webDriver);
+
+
+        AddWarranty.onClickWarranty(webDriver);
+        Basket.isVisibleBasketPage(webDriver);
+
+        /*
+        AddProductToCar.isVisibleResultProduct(webDriver);
+
         AddProductToCar.onClickCar(webDriver);
         AddCant.onClickCant(webDriver);
         AddWarranty.onClickWarranty(webDriver);
         //Assert.assertTrue(IsEmployeeSuccessAlert.visible(webDriver));
+         */
+    }
+
+    @DataProvider(name="googleDataProvider")
+    public Object[] googleDataProvider() throws FileNotFoundException {
+        return JsonTestDataHelper.getInstance().geTestData(googleTestDataPath + "googleData.json", Google.class);
     }
 }

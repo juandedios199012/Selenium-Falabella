@@ -21,7 +21,10 @@ public class DetailsProduct {
 
     public static void onClickProduct(WebDriver webDriver){
         //WaitUntilAlert.isPresent(webDriver);
+
         WaitUntilElement.isVisible(webDriver,ProductPage.linkProduct);
         Click.onClickElementList(webDriver, ProductPage.linkProduct,0);
+        Click.on(webDriver,ProductPage.DETAIL_PRODUCT_NAME);
+
     }
 }

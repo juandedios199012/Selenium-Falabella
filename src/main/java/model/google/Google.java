@@ -7,4 +7,10 @@ public class Google {
     public String getWord() {
         return word;
     }
+
+    private String categorie;
+
+    public String getCategorie() {
+        return categorie;
+    }
 }

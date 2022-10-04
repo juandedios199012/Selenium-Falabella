@@ -1,6 +1,7 @@
 [
   {
     "word": "Falabella.co",
+    "numberOrder": 0,
     "product": "Televisor 32 LG",
     "department":"ARAUCA",
     "province":"FORTUL",
@@ -9,6 +10,6 @@
     "departmentNumber": "Suite 123",
     "giftCardNumber": "1234567890",
     "password": "123",
-    "message": "El número de tarjeta o código de seguridad que ingresaste no es válido. Por favor verifica los datos e intenta de nuevo."
+    "alert": "El número de tarjeta o código de seguridad que ingresaste no es válido. Por favor verifica los datos e intenta de nuevo."
   }
 ]

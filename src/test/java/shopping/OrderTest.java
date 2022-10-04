@@ -3,49 +3,34 @@ package shopping;
 import base.BaseTest;
 import helper.JsonTestDataHelper;
 import model.Product;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import task.cart.*;
 import task.product.SearchProduct;
-import task.product.AddProductToCar;
 import task.product.DetailsProduct;
 import task.google.SearchGoogle;
 import utilities.CloseShadowRoot;
 
 
-import javax.swing.text.View;
 import java.io.FileNotFoundException;
 
 public class OrderTest extends BaseTest {
 
-
     public static String productTestDataPath = "resource/testData/product/";
 
     @Test(dataProvider="productDataProvider")
-    public void testOrder(Product product){
+    public void testOrder(Product product) throws InterruptedException {
         SearchGoogle.withTheData(webDriver, product);
         CloseShadowRoot.onClickClose(webDriver);
         SearchProduct.withTheData(webDriver, product);
-        //LIst result search
-        AddProductToCar.isVisibleResultProduct(webDriver);
-        DetailsProduct.onClickProduct(webDriver);
-        DetailsProduct.clickAddToBagButton(webDriver);
-        AddCant.onClickCant(webDriver);
-        AddWarranty.onClickWarranty(webDriver);
-        GoToShopping.isVisibleButtonGoToShopping(webDriver);
-        GoToShopping.onClickGoToShopping(webDriver);
-        AddDelivery.isVisibleIsDeliveryPage(webDriver);
+        DetailsProduct.addProductToBag(webDriver,product);
+        AddDetailOrder.addDetailOrder(webDriver);
         AddDelivery.withTheData(webDriver,product);
-        AddDetailDelivery.isVisibleIsDetailDeliveryPage(webDriver);
         AddDetailDelivery.withTheData(webDriver,product);
-        AddPayment.isVisibleIsPaymentPage(webDriver);
         AddPayment.withTheData(webDriver,product);
-        ViewAlert.isVisibleIsDeliveryPage(webDriver);
 
-        Assert.assertEquals(ViewAlert.getTextAlert(webDriver),product.getAlert());
+        Assert.assertEquals(ShowAlert.getTextAlert(webDriver),product.getAlert());
 
     }
 

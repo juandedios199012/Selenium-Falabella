@@ -3,6 +3,7 @@ package model;
 public class Product {
 
     private String word;
+    private int numberOrder;
     private String product;
     private String department;
     private String province;
@@ -15,6 +16,10 @@ public class Product {
 
     public String getWord() {
         return word;
+    }
+
+    public int getNumberOrder() {
+        return numberOrder;
     }
 
     public String getProduct() {
@@ -52,4 +57,6 @@ public class Product {
     public String getAlert() {
         return alert.trim();
     }
+
+
 }

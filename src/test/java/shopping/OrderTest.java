@@ -26,7 +26,6 @@ public class OrderTest extends BaseTest {
         SearchGoogle.withTheData(webDriver, product);
         CloseShadowRoot.onClickClose(webDriver);
         SearchProduct.withTheData(webDriver, product);
-        //LIst result search
         AddProductToCar.isVisibleResultProduct(webDriver);
         DetailsProduct.onClickProduct(webDriver);
         DetailsProduct.clickAddToBagButton(webDriver);

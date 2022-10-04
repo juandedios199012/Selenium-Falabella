@@ -7,7 +7,4 @@ public class ExtendedWarrantyPage {
     public static By BUTTON_SHOW_CART = By.id("linkButton");
     public static By TEXT_CART = By.cssSelector("div[class='fb-masthead__dropdown__myorders__title']");
 
-    // aqui
-    //localizador para continuar despacho
-
 }

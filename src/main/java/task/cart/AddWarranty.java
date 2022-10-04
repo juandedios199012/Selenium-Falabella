@@ -12,8 +12,6 @@ public class AddWarranty {
         Click.on(webDriver, ExtendedWarrantyPage.BUTTON_WARRANTY_OPTION);
         Click.on(webDriver, ExtendedWarrantyPage.BUTTON_SHOW_CART);
 
-        //WaitUntilElement.isVisible(webDriver,)
-        //Click.on(webDriver, ExtendedWarrantyPage.textCart);
     }
 
 

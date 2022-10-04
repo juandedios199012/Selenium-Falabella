@@ -8,7 +8,7 @@
 
 ### Descripción
 Proyecto del curso **Automatización I - Intro. a la Automatización de PruebasS: UnitTest/UI con SELENIUM** del **Diplomado Testing de Software**
-por la [Universidad Cátolica Boliviana "San Pablo"](https://www.ucb.edu.bo/) de Bolivia.
+por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de Bolivia.
 
 ### Team
   - [ARIZACA CALLEJAS GUISELA LIBERTAD](https://www.linkedin.com/in/guisela-arizaca/)

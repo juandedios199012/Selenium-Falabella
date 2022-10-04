@@ -8,8 +8,8 @@ import pages.HomePage;
 public class CloseShadowRoot {
 
     public static void onClickClose(WebDriver webDriver){
-        WaitUntilElement.isVisible(webDriver, HomePage.shadowRoot);
-        WaitUntilElement.isVisible(webDriver, HomePage.buttonShadowRoot);
-        Click.onClickShadowRootElement(webDriver,HomePage.shadowRoot,HomePage.buttonShadowRoot);
+        WaitUntilElement.isVisible(webDriver, HomePage.SHADOW_ROOT);
+        WaitUntilElement.isVisible(webDriver, HomePage.BUTTON_SHADOW_ROOT);
+        Click.onClickShadowRootElement(webDriver,HomePage.SHADOW_ROOT,HomePage.BUTTON_SHADOW_ROOT);
     }
 }

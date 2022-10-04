@@ -1,4 +1,4 @@
-package helper;
+package pages.product.helper;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class CategoryPage {
 
-    public static By inputSearchCaegorie = By.id("testId-SearchBar-Input");
+    public static By INPUT_SEARCH_CATEGORY = By.id("testId-SearchBar-Input");
 
     //Televisor Exclusiv Smart Tv E32V2Hn 32"
  //Televisor Exclusiv Hd Smart Tv Linux E32V2Hn

@@ -1,10 +1,8 @@
 package shopping;
 
 import base.BaseTest;
-import helper.JsonTestDataHelper;
+import pages.product.helper.JsonTestDataHelper;
 import model.Product;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +14,6 @@ import task.google.SearchGoogle;
 import utilities.CloseShadowRoot;
 
 
-import javax.swing.text.View;
 import java.io.FileNotFoundException;
 
 public class OrderTest extends BaseTest {

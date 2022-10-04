@@ -8,7 +8,7 @@ import pages.shopping.OrderPage;
 public class AddCant {
 
     public static void onClickCant(WebDriver webDriver){
-        WaitUntilElement.isPresent(webDriver, OrderPage.buttonCant);
-        Click.on(webDriver, OrderPage.buttonCant);
+        WaitUntilElement.isPresent(webDriver, OrderPage.BUTTON_CANT);
+        Click.on(webDriver, OrderPage.BUTTON_CANT);
     }
 }

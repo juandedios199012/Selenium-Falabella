@@ -8,9 +8,9 @@ import pages.shopping.ExtendedWarrantyPage;
 public class AddWarranty {
 
     public static void onClickWarranty(WebDriver webDriver){
-        WaitUntilElement.isPresent(webDriver, ExtendedWarrantyPage.buttonWarrantyOption);
-        Click.on(webDriver, ExtendedWarrantyPage.buttonWarrantyOption);
-        Click.on(webDriver, ExtendedWarrantyPage.buttonShowCart);
+        WaitUntilElement.isPresent(webDriver, ExtendedWarrantyPage.BUTTON_WARRANTY_OPTION);
+        Click.on(webDriver, ExtendedWarrantyPage.BUTTON_WARRANTY_OPTION);
+        Click.on(webDriver, ExtendedWarrantyPage.BUTTON_SHOW_CART);
 
         //WaitUntilElement.isVisible(webDriver,)
         //Click.on(webDriver, ExtendedWarrantyPage.textCart);

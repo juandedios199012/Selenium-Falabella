@@ -2,7 +2,7 @@ package base;
 
 import com.aventstack.extentreports.Status;
 import factory.WebDriverFactory;
-import helper.ScreenShotHelper;
+import pages.product.helper.ScreenShotHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;

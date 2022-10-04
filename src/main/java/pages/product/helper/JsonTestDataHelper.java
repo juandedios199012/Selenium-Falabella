@@ -1,4 +1,4 @@
-package helper;
+package pages.product.helper;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

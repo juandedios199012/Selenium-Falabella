@@ -39,3 +39,6 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de
   - BaseTest Class
   - Parallel execution
   - Azure Pipeline
+
+### Comandos GIT
+  - Enviar el código al repositorio : `git push origin HEAD`

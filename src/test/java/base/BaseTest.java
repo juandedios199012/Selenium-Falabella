@@ -18,19 +18,18 @@ public class BaseTest {
     }
 
     @BeforeMethod
-   @Parameters({"url","browser","seleniumGridUrl"})
-    public void setUp(String url,String browser, String seleniumGridUrl,ITestResult iTestResult) throws Exception {
+    @Parameters({"url", "browser", "seleniumGridUrl"})
+    public void setUp(String url, String browser, String seleniumGridUrl, ITestResult iTestResult) throws Exception {
         ReportManager.getInstance().startTest(iTestResult.getMethod().getMethodName());
-
         webDriver = WebDriverFactory.getDriver(browser, seleniumGridUrl);
         webDriver.get(url);
         webDriver.manage().window().maximize();
     }
 
     @AfterMethod
-    public void tearDown(ITestResult iTestResult){
+    public void tearDown(ITestResult iTestResult) {
         try {
-            switch (iTestResult.getStatus()){
+            switch (iTestResult.getStatus()) {
                 case ITestResult.FAILURE:
                     ReportManager.getInstance().getTest().log(Status.FAIL, "Test failed");
                     break;
@@ -44,21 +43,21 @@ public class BaseTest {
                     ReportManager.getInstance().getTest().log(Status.FAIL, "Test incomplete");
             }
 
-            if(iTestResult.getStatus() != ITestResult.SUCCESS && iTestResult.getThrowable() != null){
+            if (iTestResult.getStatus() != ITestResult.SUCCESS && iTestResult.getThrowable() != null) {
                 ReportManager.getInstance().getTest().log(Status.FAIL, iTestResult.getThrowable().getMessage());
                 ScreenShotHelper.takeScreenShotAndAdToHTMLReport(webDriver, Status.FAIL, "Failure Image");
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if(webDriver != null)
+        } finally {
+            if (webDriver != null)
                 webDriver.quit();
         }
     }
 
     @AfterSuite
-    public static void tearDownSuite(){
+    public static void tearDownSuite() {
         ReportManager.getInstance().flush();
 
     }

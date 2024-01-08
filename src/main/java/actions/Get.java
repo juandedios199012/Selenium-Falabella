@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Get {
 
-    public static String getText(WebDriver webDriver, By locator){
-       return webDriver.findElement(locator).getText();
+    public static String getText(WebDriver webDriver, By locator) {
+        return webDriver.findElement(locator).getText();
     }
 }

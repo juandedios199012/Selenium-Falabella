@@ -11,12 +11,12 @@ public class RemoteFirefoxDriverCreator extends WebDriverCreator {
 
     private String url;
 
-    public RemoteFirefoxDriverCreator(String url){
+    public RemoteFirefoxDriverCreator(String url) {
         this.url = url;
     }
 
     @Override
     public WebDriver createWebDriver() throws MalformedURLException {
-        return new RemoteWebDriver(new URL(url),new FirefoxOptions());
+        return new RemoteWebDriver(new URL(url), new FirefoxOptions());
     }
 }

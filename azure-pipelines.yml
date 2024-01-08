@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- main
+  - main
 
 pool:
   name: PortafolioAG
@@ -13,28 +13,28 @@ pool:
 #Your build pipeline references an undefined variable named ‘Parameters.mavenPOMFile’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 
 steps:
-- task: Maven@3
-  displayName: 'Maven pom.xml'
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean test'
-    testRunTitle: 'Update testResultsFiles to surefire '
-    jdkVersionOption: 1.11
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**/*'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-    CleanTargetFolder: true
-  condition: succeededOrFailed()
+  - task: Maven@3
+    displayName: 'Maven pom.xml'
+    inputs:
+      mavenPomFile: 'pom.xml'
+      goals: 'clean test'
+      testRunTitle: 'Update testResultsFiles to surefire '
+      jdkVersionOption: 1.11
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: TestProjectScript'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: TestProjectScript
-  condition: succeededOrFailed()
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+    inputs:
+      SourceFolder: '$(system.defaultworkingdirectory)'
+      Contents: '**/*'
+      TargetFolder: '$(build.artifactstagingdirectory)'
+      CleanTargetFolder: true
+    condition: succeededOrFailed()
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: TestProjectScript'
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)'
+      ArtifactName: TestProjectScript
+    condition: succeededOrFailed()
 

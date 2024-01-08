@@ -7,7 +7,7 @@ public class FirefoxDriverCreator extends WebDriverCreator {
 
     @Override
     public WebDriver createWebDriver() {
-        System.setProperty("webdriver.gecko.driver","resource/geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "resource/geckodriver.exe");
         return new FirefoxDriver();
     }
 }

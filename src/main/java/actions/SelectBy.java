@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SelectBy {
 
-    public static void selectByVisibleText(WebDriver webDriver, By locator, String text){
+    public static void selectByVisibleText(WebDriver webDriver, By locator, String text) {
         Select select = new Select(webDriver.findElement(locator));
         select.selectByVisibleText(text);
     }

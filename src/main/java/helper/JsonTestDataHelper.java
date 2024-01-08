@@ -16,14 +16,14 @@ public class JsonTestDataHelper {
 
     private static final Logger logger = LogManager.getLogger(JsonTestDataHelper.class);
 
-    private JsonTestDataHelper(){
+    private JsonTestDataHelper() {
     }
 
-    public static JsonTestDataHelper getInstance(){
-        if (instance == null){
+    public static JsonTestDataHelper getInstance() {
+        if (instance == null) {
             //synchronized block to remove overhead
-            synchronized (JsonTestDataHelper.class){
-                if(instance==null){
+            synchronized (JsonTestDataHelper.class) {
+                if (instance == null) {
                     // if instance is null, initialize
                     instance = new JsonTestDataHelper();
                     logger.info("JsonTestDataHelper created");

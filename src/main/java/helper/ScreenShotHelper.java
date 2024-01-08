@@ -8,14 +8,14 @@ import org.openqa.selenium.WebDriver;
 import report.ReportManager;
 
 public class ScreenShotHelper {
-    public static String takeScreenShot(WebDriver webDriver){
-        TakesScreenshot takesScreenshot = (TakesScreenshot)webDriver;
+    public static String takeScreenShot(WebDriver webDriver) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) webDriver;
         String screenshot = takesScreenshot.getScreenshotAs(OutputType.BASE64);
 
         return screenshot;
     }
 
-    public static void takeScreenShotAndAdToHTMLReport(WebDriver webDriver, Status status, String details){
+    public static void takeScreenShotAndAdToHTMLReport(WebDriver webDriver, Status status, String details) {
         String imageBase64 = ScreenShotHelper.takeScreenShot(webDriver);
 
         ReportManager.getInstance().getTest().log(status, details,

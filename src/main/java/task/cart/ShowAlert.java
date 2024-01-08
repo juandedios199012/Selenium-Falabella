@@ -1,6 +1,7 @@
 package task.cart;
 
-import actions.*;
+import actions.Get;
+import actions.WaitUntilElement;
 import helper.JsonTestDataHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,11 +13,11 @@ public class ShowAlert {
 
     private static final Logger logger = LogManager.getLogger(JsonTestDataHelper.class);
 
-    public static void isVisibleIsAlertPage(WebDriver webDriver, By locator){
+    public static void isVisibleIsAlertPage(WebDriver webDriver, By locator) {
         WaitUntilElement.isVisibility(webDriver, locator);
     }
 
-    public static String getTextAlert(WebDriver webDriver){
+    public static String getTextAlert(WebDriver webDriver) {
         logger.info("Show Alert");
         isVisibleIsAlertPage(webDriver, AlertPage.ALERT);
         return Get.getText(webDriver, AlertPage.ALERT);

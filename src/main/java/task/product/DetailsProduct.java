@@ -14,16 +14,16 @@ public class DetailsProduct {
 
     private static final Logger logger = LogManager.getLogger(JsonTestDataHelper.class);
 
-    public static void addProductToBag(WebDriver webDriver, Product product){
-        isVisibleProductInformation(webDriver,ProductPage.ITEM_PRODUCT);
+    public static void addProductToBag(WebDriver webDriver, Product product) {
+        isVisibleProductInformation(webDriver, ProductPage.ITEM_PRODUCT);
         logger.info("Click item product");
-        Click.onClickElementList(webDriver, ProductPage.ITEM_PRODUCT,product.getNumberOrder());
-        isVisibleProductInformation(webDriver,ProductPage.ADD_BAG_BUTTON);
+        Click.onClickElementList(webDriver, ProductPage.ITEM_PRODUCT, product.getNumberOrder());
+        isVisibleProductInformation(webDriver, ProductPage.ADD_BAG_BUTTON);
         logger.info("Click add bag button");
-        Click.on(webDriver,ProductPage.ADD_BAG_BUTTON);
+        Click.on(webDriver, ProductPage.ADD_BAG_BUTTON);
     }
 
-    public static void isVisibleProductInformation(WebDriver webDriver, By locator){
+    public static void isVisibleProductInformation(WebDriver webDriver, By locator) {
         IsDisplayed.element(webDriver, locator);
     }
 }

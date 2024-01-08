@@ -20,11 +20,11 @@ public class ReportManager {
         createExtentReportInstance();
     }
 
-    public static ReportManager getInstance(){
-        if (instance == null){
+    public static ReportManager getInstance() {
+        if (instance == null) {
             //synchronized block to remove overhead
-            synchronized (ReportManager.class){
-                if (instance == null){
+            synchronized (ReportManager.class) {
+                if (instance == null) {
                     try {
                         // if instance is null, initialize
                         instance = new ReportManager();

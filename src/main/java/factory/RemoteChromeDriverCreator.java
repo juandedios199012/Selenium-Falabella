@@ -11,12 +11,12 @@ public class RemoteChromeDriverCreator extends WebDriverCreator {
 
     private String url;
 
-    public RemoteChromeDriverCreator(String url){
+    public RemoteChromeDriverCreator(String url) {
         this.url = url;
     }
 
     @Override
     public WebDriver createWebDriver() throws MalformedURLException {
-        return new RemoteWebDriver(new URL(url),new ChromeOptions());
+        return new RemoteWebDriver(new URL(url), new ChromeOptions());
     }
 }
